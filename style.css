@@ -254,3 +254,46 @@ section[id]{scroll-margin-top:84px;}
 .essays{gap:20px;align-items:stretch;}
 
 .essays .wide{grid-column:1/-1;}
+
+/* ---------- Interaction details ---------- */
+
+/* Prayer-flag strip doubles as a reading-progress bar (only when JavaScript runs) */
+.flags{position:relative;}
+.js .flags>span{opacity:.3;}
+.flags-fill{position:absolute;inset:0;display:flex;clip-path:inset(0 100% 0 0);}
+.flags-fill span{opacity:1;}
+
+/* Links in text: faint line at rest, red line draws in on hover */
+main p a:not(.btn),.card-lnk,.hero-links a,.fnav a{
+  text-decoration:none;
+  background-image:linear-gradient(var(--crimson),var(--crimson)),linear-gradient(rgba(168,50,58,.3),rgba(168,50,58,.3));
+  background-size:0 1.5px,100% 1px;background-position:0 100%,0 100%;background-repeat:no-repeat;
+  transition:background-size .3s ease,color .2s;
+}
+.fnav a{background-image:linear-gradient(var(--crimson),var(--crimson));background-size:0 1.5px;}
+main p a:not(.btn):hover,.card-lnk:hover,.hero-links a:hover{background-size:100% 1.5px,100% 1px;}
+.fnav a:hover{background-size:100% 1.5px;}
+
+/* Trek photos: gentle zoom on hover, open large on click */
+.zoom{display:block;overflow:hidden;border-radius:8px;}
+.zoom img{border-radius:0;transition:transform .6s ease;}
+.zoom:hover img,.zoom:focus-visible img{transform:scale(1.05);}
+.gallery .wide .zoom,.photo-mosaic .pm-main .zoom{flex:1 1 0;min-height:0;}
+.gallery .wide .zoom img,.photo-mosaic .pm-main .zoom img{height:100%;}
+@media(max-width:900px){.gallery .wide .zoom{flex:none;}.gallery .wide .zoom img{height:auto;}}
+@media(max-width:640px){.photo-mosaic .pm-main .zoom{flex:none;}.photo-mosaic .pm-main .zoom img{height:auto;}}
+.lightbox{position:fixed;inset:0;z-index:9000;background:rgba(20,22,30,.9);display:flex;align-items:center;justify-content:center;padding:56px 20px 24px;}
+.lightbox figure{margin:0;max-width:min(1100px,100%);display:flex;flex-direction:column;align-items:center;}
+.lightbox img{max-width:100%;max-height:calc(100vh - 140px);width:auto;height:auto;border-radius:6px;}
+.lightbox figcaption{color:#E6E8EE;font-size:.95rem;margin-top:12px;text-align:center;}
+.lb-close{position:absolute;top:14px;right:18px;min-width:44px;min-height:44px;border:1px solid rgba(255,255,255,.4);border-radius:6px;background:transparent;color:#FFFFFF;font:500 .95rem var(--sans);cursor:pointer;padding:0 14px;}
+.lb-close:hover{background:rgba(255,255,255,.1);}
+
+/* Following cursor: mouse and trackpad only, never on touch screens */
+.cur-dot,.cur-ring{position:fixed;top:0;left:0;pointer-events:none;border-radius:50%;z-index:9999;opacity:0;}
+.cur-dot{width:8px;height:8px;margin:-4px 0 0 -4px;background:var(--crimson);transition:opacity .2s;}
+.cur-ring{width:28px;height:28px;margin:-14px 0 0 -14px;border:1.5px solid var(--slate);transition:opacity .2s,width .25s,height .25s,margin .25s,background-color .25s,border-color .25s;}
+.cur-ring.big{width:46px;height:46px;margin:-23px 0 0 -23px;background-color:rgba(168,50,58,.08);border-color:var(--crimson);}
+.cur-on .cur-dot,.cur-on .cur-ring{opacity:1;}
+.lb-open .cur-ring{border-color:#FFFFFF;}
+@media (prefers-reduced-motion:reduce){.zoom img{transition:none;}.cur-ring{transition:opacity .2s;}}
