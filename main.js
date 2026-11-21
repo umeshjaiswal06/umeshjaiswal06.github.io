@@ -1,19 +1,22 @@
-document.addEventListener('DOMContentLoaded',()=>{
-  // Custom cursor
-  const cur=document.getElementById('cur'),ring=document.getElementById('cur-ring');
-  if(cur&&ring){
-    let mx=0,my=0,rx=0,ry=0;
-    document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.transform=`translate(${mx}px,${my}px)`;});
-    (function a(){rx+=(mx-rx)*.1;ry+=(my-ry)*.1;ring.style.transform=`translate(${rx}px,${ry}px)`;requestAnimationFrame(a)})();
-    document.querySelectorAll('a,button').forEach(el=>{
-      el.addEventListener('mouseenter',()=>{cur.style.transform+=' scale(2.8)';ring.style.opacity='.15';});
-      el.addEventListener('mouseleave',()=>{ring.style.opacity='.55';});
-    });
+document.addEventListener('DOMContentLoaded', () => {
+  // Soft shadow under the top bar once the page scrolls
+  const bar = document.querySelector('.topbar');
+  if (bar) {
+    const onScroll = () => bar.classList.toggle('scrolled', window.scrollY > 10);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
   }
-  // Nav shadow on scroll
-  const nav=document.getElementById('nav');
-  if(nav)window.addEventListener('scroll',()=>{nav.style.boxShadow=scrollY>20?'0 4px 40px rgba(0,0,0,.55)':'none';},{passive:true});
-  // Scroll reveal
-  const obs=new IntersectionObserver(entries=>entries.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');obs.unobserve(x.target);}}),{threshold:.1,rootMargin:'0px 0px -30px 0px'});
-  document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
+
+  // Fade sections in as they scroll into view
+  const items = document.querySelectorAll('.rv');
+  if (!('IntersectionObserver' in window)) {
+    items.forEach(el => el.classList.add('in'));
+    return;
+  }
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+  items.forEach(el => obs.observe(el));
 });

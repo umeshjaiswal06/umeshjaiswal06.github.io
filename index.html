@@ -3,259 +3,157 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Umesh Jaiswal — Strategy, Research &amp; Consulting</title>
+<title>Umesh Jaiswal — M&amp;A Analyst</title>
+<meta name="description" content="Umesh Jaiswal is an M&amp;A analyst at MP Advisory in New Delhi, working on sell-side deals end to end: buyer research, outreach and NDAs, CIMs and financial analysis.">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://umeshjaiswal06.github.io/">
+<meta property="og:title" content="Umesh Jaiswal — M&amp;A Analyst">
+<meta property="og:description" content="M&amp;A analyst at MP Advisory, New Delhi, working on sell-side deals: buyer research, outreach and NDAs, CIMs and financial analysis.">
+<meta property="og:image" content="https://umeshjaiswal06.github.io/images/og-preview.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
-<style>
-:root{
-  --bg:#0a0f1c;--bg2:#0d1422;--card:rgba(255,255,255,0.032);--border:rgba(255,255,255,0.07);
-  --gold:#c9a84c;--gd:rgba(201,168,76,0.18);--gl:rgba(201,168,76,0.28);
-  --t1:#ede8de;--t2:#8a97a8;--t3:#4a5666;
-  --serif:'Cormorant Garamond',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif;
-}
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{font-family:var(--sans);background:var(--bg);color:var(--t1);line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
-body::after{content:'';position:fixed;inset:0;opacity:0.018;pointer-events:none;z-index:9990;
-background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");}
-/* CURSOR */
-.cur,.cur-ring{position:fixed;top:0;left:0;pointer-events:none;border-radius:50%;z-index:9999;}
-.cur{width:7px;height:7px;background:var(--gold);margin:-3.5px 0 0 -3.5px;transition:transform .15s ease;}
-.cur-ring{width:34px;height:34px;border:1px solid var(--gl);margin:-17px 0 0 -17px;transition:opacity .3s;opacity:.55;}
-/* NAV */
-nav{position:fixed;top:0;width:100%;height:66px;display:flex;align-items:center;justify-content:space-between;padding:0 56px;background:rgba(10,15,28,.92);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);z-index:1000;transition:box-shadow .3s;}
-.nav-logo{font-family:var(--serif);font-size:1.15rem;font-weight:300;color:var(--t1);text-decoration:none;letter-spacing:.06em;}
-.nav-logo span{color:var(--gold);}
-nav ul{list-style:none;display:flex;gap:34px;}
-nav ul a{color:var(--t2);text-decoration:none;font-size:.77rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;position:relative;transition:color .25s;}
-nav ul a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--gold);transition:width .25s;}
-nav ul a:hover,nav ul a.active{color:var(--gold);}
-nav ul a:hover::after,nav ul a.active::after{width:100%;}
-/* HERO */
-.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:0 56px;position:relative;overflow:hidden;}
-.hero-mesh{position:absolute;inset:0;pointer-events:none;
-  background:radial-gradient(ellipse 60% 70% at 78% 25%,rgba(201,168,76,.06) 0%,transparent 65%),
-             radial-gradient(ellipse 45% 55% at 12% 80%,rgba(20,45,100,.2) 0%,transparent 60%);}
-.hero-bg-text{position:absolute;right:-10px;bottom:-20px;font-family:var(--serif);font-size:clamp(11rem,22vw,20rem);font-weight:300;line-height:.9;color:rgba(201,168,76,.035);pointer-events:none;user-select:none;letter-spacing:-.03em;}
-.hero-inner{position:relative;z-index:1;max-width:840px;}
-.eyebrow{display:inline-flex;align-items:center;gap:14px;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:26px;opacity:0;animation:up .7s ease .2s forwards;}
-.eyebrow::before{content:'';width:36px;height:1px;background:var(--gl);}
-.hero h1{font-family:var(--serif);font-size:clamp(4rem,9vw,7.8rem);font-weight:300;line-height:1.03;letter-spacing:-.015em;color:var(--t1);opacity:0;animation:up .85s ease .35s forwards;}
-.hero h1 em{font-style:italic;color:var(--gold);}
-.hero-sub{margin-top:26px;font-size:1.02rem;font-weight:300;color:var(--t2);max-width:520px;line-height:1.88;opacity:0;animation:up .85s ease .5s forwards;}
-.ctas{margin-top:46px;display:flex;gap:16px;opacity:0;animation:up .85s ease .65s forwards;}
-.btn{display:inline-flex;align-items:center;gap:7px;font-family:var(--sans);font-size:.77rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border-radius:2px;padding:13px 26px;transition:all .25s ease;}
-.btn-s{background:var(--gold);color:var(--bg);border:1px solid var(--gold);}
-.btn-s:hover{background:#ddb95a;transform:translateY(-2px);box-shadow:0 8px 28px rgba(201,168,76,.28);}
-.btn-o{background:transparent;color:var(--gold);border:1px solid var(--gl);}
-.btn-o:hover{background:var(--gd);border-color:var(--gold);}
-.hero-coord{position:absolute;right:56px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;align-items:center;gap:12px;opacity:.3;z-index:1;animation:fi .8s ease 1s forwards;}
-.hero-coord .vl{width:1px;height:110px;background:linear-gradient(to bottom,transparent,var(--gold),transparent);}
-.hero-coord .cl{writing-mode:vertical-rl;font-size:.63rem;letter-spacing:.18em;color:var(--t3);text-transform:uppercase;}
-.scroll-hint{position:absolute;bottom:38px;left:56px;display:flex;align-items:center;gap:10px;font-size:.67rem;letter-spacing:.18em;text-transform:uppercase;color:var(--t3);z-index:1;opacity:0;animation:fi .8s ease 1.1s forwards;}
-.scroll-hint::before{content:'';width:1px;height:44px;background:linear-gradient(to bottom,transparent,var(--t3));}
-/* SECTIONS */
-section.s{padding:88px 56px;position:relative;z-index:1;}
-section.s+section.s{border-top:1px solid var(--border);}
-.alt{background:rgba(201,168,76,.02);}
-.sec-lbl{font-size:.69rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:44px;display:flex;align-items:center;gap:14px;}
-.sec-lbl::after{content:'';width:48px;height:1px;background:var(--gl);}
-/* PROFILE GRID */
-.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:2px;overflow:hidden;}
-.svc{background:var(--bg2);padding:40px 30px;position:relative;overflow:hidden;transition:background .3s;}
-.svc::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .4s ease;}
-.svc:hover{background:rgba(201,168,76,.032);}
-.svc:hover::before{transform:scaleX(1);}
-.svc-n{font-family:var(--serif);font-size:2.3rem;font-weight:300;color:var(--gl);line-height:1;margin-bottom:18px;}
-.svc-tag{font-size:.67rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
-.svc h3{font-family:var(--serif);font-size:1.3rem;font-weight:400;margin-bottom:12px;}
-.svc p{font-size:.87rem;color:var(--t2);line-height:1.75;}
-/* TWO-COL */
-.two-col{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
-h2{font-family:var(--serif);font-size:clamp(1.9rem,3.8vw,3rem);font-weight:300;line-height:1.2;margin-bottom:22px;}
-.lead{font-size:.98rem;color:var(--t2);line-height:1.88;font-weight:300;}
-.lead+.lead{margin-top:15px;}
-/* STATS */
-.stats-side{border-left:1px solid var(--border);padding-left:60px;}
-.stat{padding:26px 0;border-bottom:1px solid var(--border);}
-.stat:last-child{border-bottom:none;}
-.stat .n{font-family:var(--serif);font-size:2.8rem;font-weight:300;color:var(--gold);line-height:1;}
-.stat .n sup{font-size:1.1rem;vertical-align:super;}
-.stat .d{font-size:.76rem;color:var(--t3);margin-top:6px;letter-spacing:.04em;}
-/* INTEREST GRID */
-.interest-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:2px;overflow:hidden;}
-.interest-card{background:var(--bg2);padding:36px 30px;position:relative;overflow:hidden;transition:background .3s;}
-.interest-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .4s;}
-.interest-card:hover{background:rgba(201,168,76,.03);}
-.interest-card:hover::before{transform:scaleX(1);}
-.interest-card .ic-icon{font-size:1.5rem;margin-bottom:16px;display:block;}
-.interest-card h4{font-family:var(--serif);font-size:1.18rem;font-weight:400;margin-bottom:10px;}
-.interest-card p{font-size:.85rem;color:var(--t2);line-height:1.72;}
-/* CARDS */
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
-.card{background:var(--card);border:1px solid var(--border);border-radius:2px;padding:30px;position:relative;overflow:hidden;transition:border-color .3s,transform .3s,box-shadow .3s;}
-.card::after{content:'';position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .4s ease;}
-.card:hover{border-color:var(--gl);transform:translateY(-4px);box-shadow:0 20px 50px rgba(0,0,0,.4);}
-.card:hover::after{width:100%;}
-.card-meta{font-size:.7rem;color:var(--t3);letter-spacing:.04em;margin-bottom:13px;}
-.card h3{font-family:var(--serif);font-size:1.18rem;font-weight:400;line-height:1.35;margin-bottom:12px;}
-.card p{font-size:.85rem;color:var(--t2);line-height:1.7;}
-.card-lnk{display:inline-flex;align-items:center;gap:6px;font-size:.71rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;margin-top:18px;transition:gap .2s;}
-.card-lnk:hover{gap:10px;}
-/* FOOTER */
-footer{padding:44px 56px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;position:relative;z-index:1;}
-.fl .fn{font-family:var(--serif);font-size:1rem;color:var(--t2);margin-bottom:5px;}
-.fl{font-size:.78rem;color:var(--t3);}
-.fnav{display:flex;gap:28px;}
-.fnav a{font-size:.74rem;color:var(--t3);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;transition:color .2s;}
-.fnav a:hover{color:var(--gold);}
-/* REVEAL */
-.rv{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease;}
-.rv.in{opacity:1;transform:translateY(0);}
-.d1{transition-delay:.07s}.d2{transition-delay:.14s}.d3{transition-delay:.21s}.d4{transition-delay:.28s}
-@keyframes up{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
-@keyframes fi{from{opacity:0}to{opacity:1}}
-@media(max-width:900px){
-  nav{padding:0 20px;}
-  .hero{padding:0 20px;}
-  section.s{padding:60px 20px;}
-  .svc-grid,.two-col,.cards,.interest-grid{grid-template-columns:1fr;}
-  .stats-side{border-left:none;padding-left:0;border-top:1px solid var(--border);padding-top:32px;}
-  .hero-coord,.scroll-hint{display:none;}
-  footer{flex-direction:column;gap:20px;padding:32px 20px;text-align:center;}
-  .fnav{flex-wrap:wrap;justify-content:center;}
-}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&amp;family=IBM+Plex+Serif:wght@500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 
-<div class="cur" id="cur"></div>
-<div class="cur-ring" id="cur-ring"></div>
+<header class="topbar">
+  <div class="flags" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+  <nav id="nav" aria-label="Main">
+    <a href="index.html" class="nav-logo">Umesh<span>.</span>Jaiswal</a>
+    <ul>
+      <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Work</a></li>
+      <li><a href="blog.html">Writing &amp; Interests</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-<nav id="nav">
-  <a href="index.html" class="nav-logo">Umesh<span>.</span>Jaiswal</a>
-  <ul>
-    <li><a href="index.html" class="active">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="projects.html">Work</a></li>
-    <li><a href="blog.html">Writing &amp; Interests</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
-
+<main>
 <section class="hero">
-  <div class="hero-mesh"></div>
-  <div class="hero-bg-text">UJ</div>
   <div class="hero-inner">
-    <div class="eyebrow">Engineer · Analyst · Consultant</div>
-    <h1>Thinking deeply,<br><em>writing honestly.</em></h1>
-    <p class="hero-sub">Strategy and research professional with 3+ years in consulting-adjacent roles. I turn complex data into decisions, and complex ideas into clear writing.</p>
+    <p class="eyebrow">M&amp;A Analyst at MP Advisory, New Delhi</p>
+    <h1>I help owners sell their businesses.</h1>
+    <p class="hero-sub">I work on sell-side deals end to end. I research the company, find the right buyers, get them under NDA, prepare the CIM, and stay on through the financial analysis and buyer meetings. Before this, I spent two years on research for McKinsey engagements.</p>
     <div class="ctas">
-      <a href="about.html" class="btn btn-s">About Me</a>
-      <a href="projects.html" class="btn btn-o">My Work &rarr;</a>
+      <a href="Umesh_Jaiswal_Resume.pdf" class="btn btn-s">Download resume</a>
+      <a href="mailto:umeshjaiswal0606@gmail.com" class="btn btn-o">Email me</a>
+    </div>
+    <div class="hero-links">
+      <a href="about.html">About me</a>
+      <a href="projects.html">My work</a>
     </div>
   </div>
-  <div class="hero-coord">
-    <span class="cl">28°N · 77°E · Delhi</span>
-    <div class="vl"></div>
-  </div>
-  <div class="scroll-hint">Scroll</div>
+  <img class="headshot" src="images/umesh-jaiswal.jpg" width="476" height="476" alt="Illustrated portrait of Umesh Jaiswal in a light grey suit and red tie">
+  <a href="#what-i-do" class="scroll-hint">Scroll <svg viewBox="0 0 14 24" aria-hidden="true"><path d="M7 1v20M1.5 15.5 7 21l5.5-5.5"/></svg></a>
 </section>
 
 <!-- WHAT DEFINES ME -->
-<section class="s">
-  <div class="sec-lbl">What Defines Me</div>
+<section class="s" id="what-i-do">
+  <div class="wrap">
+  <div class="sec-lbl">What I do</div>
   <div class="svc-grid">
     <div class="svc rv d1">
       <div class="svc-n">01</div>
-      <div class="svc-tag">Strategy &amp; Consulting</div>
-      <h3>Structured Problem-Solving</h3>
-      <p>From M&amp;A research and due diligence to go-to-market strategy, I help translate ambiguous questions into defensible frameworks. Experienced working in consulting delivery environments with exacting standards.</p>
+      <div class="svc-tag">M&amp;A and deal execution</div>
+      <h3>Sell-side deals, start to finish</h3>
+      <p>Five live mandates at MP Advisory, from under $1M to $25M+. For each one I build a buyer universe of 800–1,200 companies and write the teasers and decks that go out to them.</p>
     </div>
     <div class="svc rv d2">
       <div class="svc-n">02</div>
-      <div class="svc-tag">Research &amp; Intelligence</div>
-      <h3>Market &amp; Competitive Analysis</h3>
-      <p>Structured research across company profiling, market entry, and competitive intelligence, delivered using S&amp;P Capital IQ, Power BI, and advanced Excel to surface what matters most.</p>
+      <div class="svc-tag">Research and intelligence</div>
+      <h3>Companies and markets</h3>
+      <p>More than 70 company profiles and industry reports for McKinsey engagements, and market and competitor studies for multinational clients before that.</p>
     </div>
     <div class="svc rv d3">
       <div class="svc-n">03</div>
-      <div class="svc-tag">Perspective &amp; Writing</div>
-      <h3>Society, Polity &amp; Ideas</h3>
-      <p>A deep interest in Indian polity, history, and society, shaped by years of rigorous study, informing how I read institutions, policy, and power, and how I write about them.</p>
+      <div class="svc-tag">Perspective and writing</div>
+      <h3>Polity, society and ideas</h3>
+      <p>I prepared for the UPSC civil services exam, and it left me with a strong base in Indian polity, geography and public policy. I still write about these subjects, mostly on why good policy so often falls apart on the ground.</p>
     </div>
+  </div>
   </div>
 </section>
 
 <!-- ABOUT -->
 <section class="s alt">
-  <div class="two-col">
+  <div class="wrap two-col">
     <div class="rv">
-      <div class="sec-lbl">About Me</div>
-      <h2>Analyst by craft,<br>consultant by aspiration.</h2>
-      <p class="lead">Engineering graduate with 3+ years of experience in research and strategy, including a significant engagement supporting McKinsey's Capabilities and Insights team. I have delivered across M&amp;A research, due diligence, market entry strategy, and competitive intelligence.</p>
-      <p class="lead">My goal is management and strategy consulting. I bring analytical rigour, strong communication, and a genuine understanding of business problems shaped by real consulting-grade delivery experience.</p>
-      <a href="about.html" class="btn btn-o" style="margin-top:34px;display:inline-flex;">Full Story &rarr;</a>
+      <div class="sec-lbl">About me</div>
+      <h2>From civil engineering to M&amp;A.</h2>
+      <p class="lead">I studied civil engineering and began my career on site at NTPC’s Rihand power plant. Research drew me in after that, first at Jasper Colin and then for two years on McKinsey engagements.</p>
+      <p class="lead">Since May 2026 I’ve been an M&amp;A analyst at MP Advisory, a US boutique firm. Along the way I’ve mentored and trained newer analysts on how to research well and check their own work.</p>
+      <a href="about.html" class="btn btn-o" style="margin-top:28px;">Full story</a>
     </div>
     <div class="stats-side rv d2">
-      <div class="stat"><div class="n">3<sup>+</sup></div><div class="d">Years in research, strategy and consulting support</div></div>
-      <div class="stat"><div class="n">70<sup>+</sup></div><div class="d">Company profiles delivered · McKinsey engagement</div></div>
-      <div class="stat"><div class="n">DEL</div><div class="d">Based in Delhi, India</div></div>
+      <div class="stat"><div class="n">3<sup>+</sup></div><div class="d">Years in research and M&amp;A</div></div>
+      <div class="stat"><div class="n">70<sup>+</sup></div><div class="d">Company profiles for McKinsey engagements</div></div>
+      <div class="stat"><div class="n">5</div><div class="d">Live sell-side mandates at MP Advisory</div></div>
+      <div class="stat"><div class="n">3–5</div><div class="d">Projects handled in parallel</div></div>
     </div>
   </div>
 </section>
 
 <!-- PERSONAL INTERESTS -->
 <section class="s">
-  <div class="sec-lbl">Beyond the Work</div>
+  <div class="wrap">
+  <div class="sec-lbl">Beyond the work</div>
   <div class="interest-grid">
     <div class="interest-card rv d1">
-      <span class="ic-icon">🏔️</span>
-      <h4>Trekking &amp; Mountains</h4>
-      <p>The Himalayas are my other classroom. Last summit: Chandrashila, Uttarakhand (~12,200 ft). Next target: a 16,000 ft high-altitude trek in the 2026 season. The mountains teach patience, honest self-assessment, and when to turn back.</p>
+      <span class="ic-icon" aria-hidden="true">🏔️</span>
+      <h4>Trekking</h4>
+      <p>Most of my time off goes to the Himalayas. My latest trek was Hampta Pass in Himachal, at 14,100 ft, and before that Tungnath and Chandrashila in Uttarakhand. There’s more about these treks on the <a href="blog.html">Writing &amp; Interests</a> page.</p>
     </div>
     <div class="interest-card rv d2">
-      <span class="ic-icon">♟️</span>
+      <span class="ic-icon" aria-hidden="true">♟️</span>
       <h4>Chess</h4>
-      <p>A serious and long-standing interest. Chess sharpens the same instincts useful in strategy work: reading multiple moves ahead, managing uncertainty, and knowing which position to concede in order to win the game.</p>
+      <p>I’ve played seriously for years, and I still play whenever I get the chance.</p>
     </div>
     <div class="interest-card rv d3">
-      <span class="ic-icon">🏏</span>
+      <span class="ic-icon" aria-hidden="true">🏏</span>
       <h4>Cricket</h4>
-      <p>A genuine passion for the game, both as a player and a follower. Cricket, like good research, rewards patience, situational awareness, and the ability to read what is not immediately obvious from the surface.</p>
+      <p>I play when I can and follow it closely when I can’t.</p>
     </div>
+  </div>
   </div>
 </section>
 
-<!-- RECENT WRITING -->
-<section class="s" style="border-top:1px solid var(--border);">
-  <div class="sec-lbl">Recent Writing</div>
+<!-- WRITING -->
+<section class="s">
+  <div class="wrap">
+  <div class="sec-lbl">Writing</div>
   <div class="cards">
     <div class="card rv d1">
-      <div class="card-meta">Policy · 8 min read</div>
-      <h3>Welfare by Design: Why Intent Alone Doesn't Move the Needle</h3>
-      <p>On the structural gap between policy formulation and last-mile delivery in India's social sector.</p>
-      <a href="blog.html" class="card-lnk">Read Essay &rarr;</a>
+      <div class="card-meta">Research report, April 2026</div>
+      <h3>AI and the Employment Hierarchy in India</h3>
+      <p>A 10-page look at how AI is changing work in India, from entry-level roles to the board.</p>
+      <a href="projects.html#report" class="card-lnk">Read the report</a>
     </div>
     <div class="card rv d2">
-      <div class="card-meta">Governance · 6 min read</div>
-      <h3>The Bureaucratic Bottleneck: Reforming India's Administrative State</h3>
-      <p>Examining the institutional inertia that slows state capacity and what reform proposals consistently miss.</p>
-      <a href="blog.html" class="card-lnk">Read Essay &rarr;</a>
+      <div class="card-meta">Policy essay, working draft</div>
+      <h3>Welfare by Design: Why Intent Alone Doesn’t Move the Needle</h3>
+      <p>The Directive Principles set the goals. Somewhere between the promise and the ration shop, from the PDS to direct benefit transfers, people keep falling through.</p>
+      <a href="blog.html" class="card-lnk">See all writing</a>
     </div>
     <div class="card rv d3">
-      <div class="card-meta">Travel · 5 min read</div>
-      <h3>Above the Treeline: Notes from Chandrashila</h3>
-      <p>What a 12,000-foot ridge in Uttarakhand teaches about patience, preparation, and perspective.</p>
-      <a href="blog.html" class="card-lnk">Read Essay &rarr;</a>
+      <div class="card-meta">Polity essay, working draft</div>
+      <h3>Federalism Under Pressure: Centre–State Relations</h3>
+      <p>The Seventh Schedule split power three ways in 1950. Article 356, the Finance Commission and now the GST Council have kept moving the line ever since.</p>
+      <a href="blog.html" class="card-lnk">See all writing</a>
     </div>
   </div>
+  </div>
 </section>
+</main>
 
 <footer>
-  <div class="fl"><div class="fn">Umesh Jaiswal</div>© 2026 · All Rights Reserved</div>
-  <nav class="fnav">
+  <div class="fl"><div class="fn">Umesh Jaiswal</div>© 2027. All rights reserved.</div>
+  <nav class="fnav" aria-label="Footer">
     <a href="about.html">About</a>
     <a href="projects.html">Work</a>
     <a href="blog.html">Writing &amp; Interests</a>
@@ -263,16 +161,6 @@ footer{padding:44px 56px;border-top:1px solid var(--border);display:flex;justify
   </nav>
 </footer>
 
-<script>
-const cur=document.getElementById('cur'),ring=document.getElementById('cur-ring');
-let mx=0,my=0,rx=0,ry=0;
-document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.transform=`translate(${mx}px,${my}px)`;});
-(function animR(){rx+=(mx-rx)*.1;ry+=(my-ry)*.1;ring.style.transform=`translate(${rx}px,${ry}px)`;requestAnimationFrame(animR)})();
-document.querySelectorAll('a,button').forEach(el=>{el.addEventListener('mouseenter',()=>{cur.style.transform+=' scale(2.8)';ring.style.opacity='.15';});el.addEventListener('mouseleave',()=>{ring.style.opacity='.55';});});
-const nav=document.getElementById('nav');
-window.addEventListener('scroll',()=>{nav.style.boxShadow=scrollY>20?'0 4px 40px rgba(0,0,0,.55)':'none';},{passive:true});
-const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');obs.unobserve(x.target);}}),{threshold:.1,rootMargin:'0px 0px -30px 0px'});
-document.querySelectorAll('.rv').forEach(el=>obs.observe(el));
-</script>
+<script src="main.js"></script>
 </body>
 </html>
