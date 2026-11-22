@@ -21,7 +21,7 @@ a:hover{color:var(--crimson-dk);}
 .flags{display:flex;height:6px;}
 .flags span{flex:1;}
 .flags span:nth-child(1){background:var(--slate);}
-.flags span:nth-child(2){background:#FFFFFF;}
+.flags span:nth-child(2){background:#93B4DB;}
 .flags span:nth-child(3){background:var(--crimson);}
 .flags span:nth-child(4){background:var(--pine);}
 .flags span:nth-child(5){background:var(--saffron);}
@@ -257,11 +257,7 @@ section[id]{scroll-margin-top:84px;}
 
 /* ---------- Interaction details ---------- */
 
-/* Prayer-flag strip doubles as a reading-progress bar (only when JavaScript runs) */
 .flags{position:relative;}
-.js .flags>span{opacity:.3;}
-.flags-fill{position:absolute;inset:0;display:flex;clip-path:inset(0 100% 0 0);}
-.flags-fill span{opacity:1;}
 
 /* Links in text: faint line at rest, red line draws in on hover */
 main p a:not(.btn),.card-lnk,.hero-links a,.fnav a{
@@ -312,3 +308,11 @@ main p a:not(.btn):hover,.card-lnk:hover,.hero-links a:hover{background-size:100
   .js nav#nav ul a{display:block;padding:12px 2px;font-size:1rem;border-bottom:none;}
   .js nav#nav ul a.active{color:var(--crimson);}
 }
+
+/* Prayer-flag strip: the colour for the current page stands out */
+.flags{display:flex;height:8px;align-items:flex-start;}
+.flags span{flex:1;height:4px;opacity:.38;}
+.flags span.on{height:8px;opacity:1;}
+
+/* Contact page: faint letter, paper and pen behind the header */
+.ph-letter{background:linear-gradient(90deg,rgba(242,243,246,.97) 0%,rgba(242,243,246,.90) 40%,rgba(242,243,246,.80) 100%),url('images/bg-letter.webp') right center/cover no-repeat;}

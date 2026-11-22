@@ -2,27 +2,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const root = document.documentElement;
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // Top bar: soft shadow once the page scrolls, and the prayer-flag strip fills as you read
+  // Top bar: soft shadow once the page scrolls
   const bar = document.querySelector('.topbar');
-  const flags = document.querySelector('.flags');
-  let fill = null;
-  if (flags) {
-    fill = document.createElement('div');
-    fill.className = 'flags-fill';
-    fill.setAttribute('aria-hidden', 'true');
-    fill.innerHTML = '<span></span><span></span><span></span><span></span><span></span>';
-    flags.appendChild(fill);
-  }
-  const onScroll = () => {
-    if (bar) bar.classList.toggle('scrolled', window.scrollY > 10);
-    if (fill) {
-      const max = document.documentElement.scrollHeight - window.innerHeight;
-      const pct = max > 0 ? Math.min(100, Math.max(0, (window.scrollY / max) * 100)) : 100;
-      fill.style.clipPath = 'inset(0 ' + (100 - pct) + '% 0 0)';
-    }
-  };
+  const onScroll = () => { if (bar) bar.classList.toggle('scrolled', window.scrollY > 10); };
   window.addEventListener('scroll', onScroll, { passive: true });
-  window.addEventListener('resize', onScroll);
   onScroll();
 
   // Phone menu: the Menu button opens and closes the page links
