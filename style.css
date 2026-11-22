@@ -249,8 +249,8 @@ section[id]{scroll-margin-top:84px;}
 @media(max-width:640px){ .topbar{position:static;} }
 
 /* Writing & Interests: faint mountain photos behind the header and the interests section */
-.ph-photo{background:linear-gradient(180deg,rgba(242,243,246,.80) 0%,rgba(242,243,246,.90) 70%,var(--bg) 100%),url('images/bg-mountains.jpg') center 35%/cover no-repeat;}
-.bg-snow{background:linear-gradient(180deg,var(--bg) 0%,rgba(242,243,246,.90) 25%,rgba(242,243,246,.90) 75%,var(--bg) 100%),url('images/bg-snowline.jpg') center 55%/cover no-repeat;}
+.ph-photo{background:linear-gradient(180deg,rgba(242,243,246,.80) 0%,rgba(242,243,246,.90) 70%,var(--bg) 100%),url('images/bg-mountains.webp') center 35%/cover no-repeat;}
+.bg-snow{background:linear-gradient(180deg,var(--bg) 0%,rgba(242,243,246,.90) 25%,rgba(242,243,246,.90) 75%,var(--bg) 100%),url('images/bg-snowline.webp') center 55%/cover no-repeat;}
 .essays{gap:20px;align-items:stretch;}
 
 .essays .wide{grid-column:1/-1;}
@@ -297,3 +297,18 @@ main p a:not(.btn):hover,.card-lnk:hover,.hero-links a:hover{background-size:100
 .cur-on .cur-dot,.cur-on .cur-ring{opacity:1;}
 .lb-open .cur-ring{border-color:#FFFFFF;}
 @media (prefers-reduced-motion:reduce){.zoom img{transition:none;}.cur-ring{transition:opacity .2s;}}
+
+/* Line icons (Tabler Icons, MIT licence) in place of emoji */
+.line-icon{width:30px;height:30px;color:var(--slate);display:block;}
+.ic-icon,.pillar .icon{font-size:0;line-height:0;}
+
+/* Phone menu: a compact Menu button that opens the links */
+.menu-btn{display:none;}
+@media(max-width:640px){
+  .js .menu-btn{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border:1.5px solid var(--t1);border-radius:6px;background:transparent;color:var(--t1);font:500 .95rem var(--sans);cursor:pointer;}
+  .js .menu-btn[aria-expanded="true"]{background:var(--t1);color:#FFFFFF;}
+  .js nav#nav ul{display:none;width:100%;flex-direction:column;gap:0;padding:6px 0 4px;border-top:1px solid var(--border);margin-top:8px;}
+  .js nav#nav.open ul{display:flex;}
+  .js nav#nav ul a{display:block;padding:12px 2px;font-size:1rem;border-bottom:none;}
+  .js nav#nav ul a.active{color:var(--crimson);}
+}

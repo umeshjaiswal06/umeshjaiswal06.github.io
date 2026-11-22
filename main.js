@@ -25,6 +25,25 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('resize', onScroll);
   onScroll();
 
+  // Phone menu: the Menu button opens and closes the page links
+  const nav = document.getElementById('nav');
+  const menuBtn = document.querySelector('.menu-btn');
+  if (nav && menuBtn) {
+    menuBtn.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      menuBtn.textContent = open ? 'Close' : 'Menu';
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && nav.classList.contains('open')) {
+        nav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuBtn.textContent = 'Menu';
+        menuBtn.focus();
+      }
+    });
+  }
+
   // Following cursor: only for a mouse or trackpad, never on touch screens
   if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
     const dot = document.createElement('div');
